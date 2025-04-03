@@ -1,0 +1,12 @@
+x = 0:pi/20:2*pi;
+y1 = sin(x);
+y2 = exp(x);
+figure;
+title("grafico con due assi y");
+xlabel("Angolo [rad]");
+yaxis left;
+plotyy(x,y1);
+ylabel("Sinusoide");
+yaxis right;
+plotyy(x,y2);
+ylabel("esponensiale");
