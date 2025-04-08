@@ -7,12 +7,14 @@ import numpy as np
 
 
 def print_with_space(text):
-    print_with_space.count += 1
-    print(f"ESERCIZIO NUMERO:  {print_with_space.count} volte")
+    global function_count
+    function_count += 1
+    print(f"ESEMPIO NUMERO:  {function_count}")
     print(text, "\n\n\n")
 
 
-print_with_space.count = 0
+function_count = 0
+
 list1 = [1, 2, 3, 4]
 array_from_list = np.array(list1)
 print_with_space(array_from_list)
