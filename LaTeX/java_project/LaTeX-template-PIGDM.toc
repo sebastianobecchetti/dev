@@ -1,0 +1,14 @@
+\babel@toc {nil}{}\relax 
+\contentsline {chapter}{\numberline {1}Descrizione del Problema}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Il Videogioco Arcade Galaga}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}L'applicazione JGalaga}{3}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Specifica dei Requisiti}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Progetto}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Architettura del Sistema Software}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Model}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}View}{11}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Controller}{12}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Problemi Riscontrati}{13}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Conclusioni e sviluppi futuri}{16}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Bibliography}{17}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Appendice}{18}{chapter.6}%

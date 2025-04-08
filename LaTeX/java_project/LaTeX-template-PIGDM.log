@@ -1,0 +1,659 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.4.8)  8 APR 2025 12:19
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**LaTeX-template-PIGDM.tex
+(./LaTeX-template-PIGDM.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/share/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count196
+\c@chapter=\count197
+\c@section=\count198
+\c@subsection=\count199
+\c@subsubsection=\count266
+\c@paragraph=\count267
+\c@subparagraph=\count268
+\c@figure=\count269
+\c@table=\count270
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
+\babel@savecnt=\count271
+\U@D=\dimen142
+\l@unhyphenated=\language3
+ (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count272
+ (/usr/share/texmf-dist/tex/generic/babel/errbabel.def)
+
+/usr/share/texmf-dist/tex/generic/babel/babel.sty:4138: Package babel Error: Unknown option 'italian'. Either you misspelled it
+(babel)                or the language definition file italian.ldf
+(babel)                was not found.
+(babel)                There is a locale ini file for this language.
+(babel)                If itâ€™s the main language, try adding `provide=*'
+(babel)                to the babel package options.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4138 \ProcessOptions*
+                       
+Valid options are, among others: shorthands=, KeepShorthandsActive,
+activeacute, activegrave, noconfigs, safe=, main=, math=
+headfoot=, strings=, config=, hyphenmap=, or a language name.
+
+Package babel Info: You haven't specified a language as a class or package
+(babel)             option. I'll load 'nil'. Reported on input line 4188.
+(/usr/share/texmf-dist/tex/generic/babel/nil.ldf
+Language: nil 2025/02/14 v25.4 Nil language
+\l@nil=\language4
+)) (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count273
+\Gm@cntv=\count274
+\c@Gm@tempcnt=\count275
+\Gm@bindingoffset=\dimen143
+\Gm@wd@mp=\dimen144
+\Gm@odd@mp=\dimen145
+\Gm@even@mp=\dimen146
+\Gm@layoutwidth=\dimen147
+\Gm@layoutheight=\dimen148
+\Gm@layouthoffset=\dimen149
+\Gm@layoutvoffset=\dimen150
+\Gm@dimlist=\toks18
+) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+ (/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+ (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count276
+) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count277
+) (/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen153
+\Hy@linkcounter=\count278
+\Hy@pagecounter=\count279
+ (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count280
+ (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count281
+ (/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen154
+ (/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count282
+\Field@Width=\dimen155
+\Fld@charsize=\dimen156
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+ (/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count283
+\c@Item=\count284
+\c@Hfootnote=\count285
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
+ (/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count286
+\c@bookmark@seq@number=\count287
+ (/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip51
+) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+) (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+ (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count288
+\l__pdf_internal_box=\box52
+))
+Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count289
+\l__lipsum_a_int=\count290
+\l__lipsum_b_int=\count291
+ (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen157
+\captionmargin=\dimen158
+\caption@leftmargin=\dimen159
+\caption@rightmargin=\dimen160
+\caption@width=\dimen161
+\caption@indent=\dimen162
+\caption@parindent=\dimen163
+\caption@hangindent=\dimen164
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count292
+\c@continuedfloat=\count293
+Package caption Info: hyperref package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count294
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count295
+) (/usr/share/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box53
+\beforetitleunit=\skip52
+\aftertitleunit=\skip53
+\ttl@plus=\dimen165
+\ttl@minus=\dimen166
+\ttl@toksa=\toks21
+\titlewidth=\dimen167
+\titlewidthlast=\dimen168
+\titlewidthfirst=\dimen169
+) (./LaTeX-template-PIGDM.aux)
+\openout1 = `LaTeX-template-PIGDM.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=17.3571pt
+* \evensidemargin=17.3571pt
+* \topmargin=-7.86334pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count296
+\scratchdimen=\dimen170
+\scratchbox=\box54
+\nofMPsegments=\count297
+\nofMParguments=\count298
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen171
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
+\everyMPtoPDFconversion=\toks23
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package hyperref Info: Link coloring OFF on input line 32.
+ (./LaTeX-template-PIGDM.out) (./LaTeX-template-PIGDM.out)
+\@outlinefile=\write3
+\openout3 = `LaTeX-template-PIGDM.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<figures/logo-unipg.png, id=52, 523.7166pt x 255.5949pt>
+File: figures/logo-unipg.png Graphic file (type png)
+<use figures/logo-unipg.png>
+Package pdftex.def Info: figures/logo-unipg.png  used on input line 43.
+(pdftex.def)             Requested size: 154.00742pt x 75.16193pt.
+<figures/circle-cropped-galaga.png, id=54, 312.16624pt x 312.16624pt>
+File: figures/circle-cropped-galaga.png Graphic file (type png)
+<use figures/circle-cropped-galaga.png>
+Package pdftex.def Info: figures/circle-cropped-galaga.png  used on input line 64.
+(pdftex.def)             Requested size: 181.18439pt x 181.18515pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 74.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 74.
+
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./figures/logo-unipg.png> <./figures/circle-cropped-galaga.png>] (./LaTeX-template-PIGDM.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
+)
+\tf@toc=\write4
+\openout4 = `LaTeX-template-PIGDM.toc'.
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.107 \chapter
+              {Descrizione del Problema}\label{ch:despro} [1
+
+
+]
+Chapter 1.
+
+LaTeX Warning: Citation `wiki:it:galaga' on page 2 undefined on input line 108.
+
+
+LaTeX Warning: Citation `wiki:en:galaga' on page 2 undefined on input line 108.
+
+
+Overfull \hbox (16.71086pt too wide) in paragraph at lines 108--109
+\T1/cmr/m/it/12 JGalaga\T1/cmr/m/n/12 , che realizza una versione estremamente semplificata dell'omonimo videogioco
+ []
+
+
+Overfull \hbox (6.47023pt too wide) in paragraph at lines 110--111
+\T1/cmr/m/n/12 da favorire un'ampia portabilità su diversi sistemi operativi (piattaforme), riducendo
+ []
+
+
+LaTeX Warning: Citation `wiki:it:galaga' on page 2 undefined on input line 113.
+
+
+LaTeX Warning: Citation `wiki:en:galaga' on page 2 undefined on input line 113.
+
+
+Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
+(lipsum)                'nil' will be used instead.
+
+
+
+[2
+
+]
+<figures/snapshot1.png, id=91, 250.9375pt x 323.2075pt>
+File: figures/snapshot1.png Graphic file (type png)
+<use figures/snapshot1.png>
+Package pdftex.def Info: figures/snapshot1.png  used on input line 124.
+(pdftex.def)             Requested size: 127.15161pt x 163.77332pt.
+<figures/snapshot2.png, id=92, 168.63pt x 216.81pt>
+File: figures/snapshot2.png Graphic file (type png)
+<use figures/snapshot2.png>
+Package pdftex.def Info: figures/snapshot2.png  used on input line 131.
+(pdftex.def)             Requested size: 127.15161pt x 163.48378pt.
+<figures/snapshot3.png, id=93, 224.84pt x 289.08pt>
+File: figures/snapshot3.png Graphic file (type png)
+<use figures/snapshot3.png>
+Package pdftex.def Info: figures/snapshot3.png  used on input line 138.
+(pdftex.def)             Requested size: 127.15161pt x 163.48047pt.
+
+Overfull \hbox (4.29951pt too wide) in paragraph at lines 162--162
+\T1/cmr/m/n/12 Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt
+ []
+
+
+
+[3 <./figures/snapshot1.png (PNG copy)> <./figures/snapshot2.png> <./figures/snapshot3.png (PNG copy)>]
+
+[4]
+Chapter 2.
+
+Overfull \hbox (2.76143pt too wide) in paragraph at lines 171--172
+\T1/cmr/m/n/12 L'applicazione JGalaga che si intende realizzare dovrà soddisfare i seguenti requisiti. 
+ []
+
+
+
+[5
+
+]
+
+[6]
+Chapter 3.
+
+Overfull \hbox (17.27818pt too wide) in paragraph at lines 212--212
+\T1/cmr/m/n/12 elementum ullamcorper leo. Morbi dui. Aliquam sagittis. Nunc placerat. Pellentesque
+ []
+
+<figures/mvc.pdf, id=133, 346.29375pt x 165.61874pt>
+File: figures/mvc.pdf Graphic file (type pdf)
+<use figures/mvc.pdf>
+Package pdftex.def Info: figures/mvc.pdf  used on input line 216.
+(pdftex.def)             Requested size: 192.65028pt x 92.13934pt.
+<figures/mvc-interfaces.pdf, id=134, 361.35pt x 165.61874pt>
+File: figures/mvc-interfaces.pdf Graphic file (type pdf)
+<use figures/mvc-interfaces.pdf>
+Package pdftex.def Info: figures/mvc-interfaces.pdf  used on input line 223.
+(pdftex.def)             Requested size: 200.84679pt x 92.05594pt.
+
+Overfull \hbox (12.43074pt too wide) in paragraph at lines 235--235
+[]\T1/cmr/m/n/12 Suspendisse vitae elit. Aliquam arcu neque, ornare in, ullamcorper quis, commodo
+ []
+
+
+Overfull \hbox (17.27818pt too wide) in paragraph at lines 235--235
+\T1/cmr/m/n/12 elementum ullamcorper leo. Morbi dui. Aliquam sagittis. Nunc placerat. Pellentesque
+ []
+
+
+
+[7
+
+]
+<figures/ModelClassDiagram.png, id=140, 752.8125pt x 451.6875pt>
+File: figures/ModelClassDiagram.png Graphic file (type png)
+<use figures/ModelClassDiagram.png>
+Package pdftex.def Info: figures/ModelClassDiagram.png  used on input line 244.
+(pdftex.def)             Requested size: 418.25368pt x 250.95831pt.
+
+
+[8 <./figures/mvc.pdf> <./figures/mvc-interfaces.pdf
+
+pdfTeX warning: pdflatex (file ./figures/mvc-interfaces.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Overfull \hbox (23.12062pt too wide) in paragraph at lines 250--250
+\T1/cmr/m/n/12 condimentum facilisis libero. Suspendisse in elit quis nisl aliquam dapibus. Pellentesque
+ []
+
+
+
+[9 <./figures/ModelClassDiagram.png>]
+
+LaTeX Warning: Citation `yUML' on page 10 undefined on input line 252.
+
+
+Overfull \hbox (3.16003pt too wide) in paragraph at lines 252--253
+\T1/cmr/m/n/12 carta e penna, senza avvalersi di editor UML. Anzi, i diagrammi creati manualmente
+ []
+
+<figures/classDiagramSketch.jpg, id=174, 239.48294pt x 175.7153pt>
+File: figures/classDiagramSketch.jpg Graphic file (type jpg)
+<use figures/classDiagramSketch.jpg>
+Package pdftex.def Info: figures/classDiagramSketch.jpg  used on input line 255.
+(pdftex.def)             Requested size: 418.25368pt x 306.9004pt.
+
+Overfull \hbox (23.12062pt too wide) in paragraph at lines 263--263
+\T1/cmr/m/n/12 condimentum facilisis libero. Suspendisse in elit quis nisl aliquam dapibus. Pellentesque
+ []
+
+
+
+[10 <./figures/classDiagramSketch.jpg>]
+<figures/UI-Class-Diagram-Advanced.png, id=180, 868.14337pt x 322.50487pt>
+File: figures/UI-Class-Diagram-Advanced.png Graphic file (type png)
+<use figures/UI-Class-Diagram-Advanced.png>
+Package pdftex.def Info: figures/UI-Class-Diagram-Advanced.png  used on input line 270.
+(pdftex.def)             Requested size: 418.25368pt x 155.37633pt.
+
+
+[11 <./figures/UI-Class-Diagram-Advanced.png>]
+<figures/SequenceDiagram-PlantText.png, id=186, 491.8375pt x 399.4925pt>
+File: figures/SequenceDiagram-PlantText.png Graphic file (type png)
+<use figures/SequenceDiagram-PlantText.png>
+Package pdftex.def Info: figures/SequenceDiagram-PlantText.png  used on input line 286.
+(pdftex.def)             Requested size: 292.77629pt x 237.81375pt.
+
+Underfull \hbox (badness 2573) in paragraph at lines 287--287
+[]\T1/cmr/m/n/12 Figure 3.5: |Diagramma di sequenza che illustra la gestione dell'evento
+ []
+
+
+Overfull \hbox (5.80461pt too wide) in paragraph at lines 292--292
+[]\T1/cmr/m/n/12 Etiam pede massa, dapibus vitae, rhoncus in, placerat posuere, odio. Vestibulum
+ []
+
+<figures/controller-sketched.png, id=187, 481.8pt x 341.02406pt>
+File: figures/controller-sketched.png Graphic file (type png)
+<use figures/controller-sketched.png>
+Package pdftex.def Info: figures/controller-sketched.png  used on input line 295.
+(pdftex.def)             Requested size: 334.60422pt x 236.84192pt.
+
+
+[12]
+Overfull \hbox (2.48093pt too wide) in paragraph at lines 303--303
+\T1/cmr/m/n/12 condimentum. Etiam egestas tortor vitae lacus. Praesent cursus. Mauris bibendum
+ []
+
+
+
+[13 <./figures/SequenceDiagram-PlantText.png (PNG copy)>]
+Overfull \hbox (8.17577pt too wide) in paragraph at lines 327--327
+\T1/cmr/m/n/12 consequat placerat magna. Duis pretium tincidunt justo. Sed sollicitudin vestibulum
+ []
+
+
+
+[14{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/controller-sketched.png>]
+
+[15]
+Chapter 4.
+(./LaTeX-template-PIGDM.bbl
+
+[16
+
+]
+Chapter 5.
+)
+
+[17
+
+]
+Chapter 6.
+
+
+[18
+
+] (./LaTeX-template-PIGDM.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `LaTeX-template-PIGDM.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `LaTeX-template-PIGDM.out':
+(rerunfilecheck)             Before: 4285E8429BA566FB7C177AFB929B960B;1711
+(rerunfilecheck)             After:  040A8B655E558B434FB5EA07E57DB8E1;1815.
+ ) 
+Here is how much of TeX's memory you used:
+ 12747 strings out of 475171
+ 208799 string characters out of 5767096
+ 709200 words of memory out of 5000000
+ 35538 multiletter control sequences out of 15000+600000
+ 572222 words of font info for 62 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 79i,8n,93p,545b,539s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on LaTeX-template-PIGDM.pdf (19 pages, 657635 bytes).
+PDF statistics:
+ 296 PDF objects out of 1000 (max. 8388607)
+ 229 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+
