@@ -1,0 +1,12 @@
+# Describes the level difficulty (easy,medium,hard)
+difficulty = easy
+
+# Set the number of lives
+numlives = 3
+
+# Background color.
+# Possible values are those supported by Java.
+backgroundcolor = gray
+
+
+

@@ -1,0 +1,4 @@
+file.txt --> FileInputStream -byte-> InputStreamReader(utf-8) -> chars[] -> Program
+utf-8
+
+Program -> chars[] -> OutputStreamWriter(utf-8) -> FileOutputStream -byte -> file.txt
