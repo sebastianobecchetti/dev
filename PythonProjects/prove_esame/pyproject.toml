@@ -1,0 +1,13 @@
+[project]
+name = "prove_esame"
+version = "0.1.0"
+description = ""
+authors = []
+requires-python = ">=3.8"
+
+[tool.setuptools]
+packages = ["prove_esame"]
+package-dir = {"" = "src"}
+
+[tool.ruff]
+line-length = 120

@@ -1,0 +1,35 @@
+clear,clc
+bbits = [0 1 0 1 0 0 1 0 ]';
+x = zeros(0,1);
+f0 = 1070;
+f1 = 1270;
+fc = 8000;
+T = 1/10;
+A = 0.3;
+t = (0:1/fc:T-0.5/fc)'; %lasci mezzo passo in più → utile per avere simmetria nei grafici della FFT ed evitare aliasing “sfalsato”.
+for bit = bbits'
+    switch bit
+        case false
+            s = A * cos(2*pi*f0*t);
+        case true
+            s = A * cos(2*pi*f1*t);
+    end
+    x = vertcat(x,s);
+end
+sound(x,fc)
+
+figure(1)
+t = (0:length(x)-1)'/fc; %costruisco l'asse dei tempi con questa logica: parto da 0 quindi tolgo 1 dalla lunghezza massima e normalizzo tutto per fc
+plot(t,x)
+xlabel("Asse del tempo")
+ylabel("x")
+w = 0.2*A*randn(size(x));
+y = x + w;
+pause(3)
+sound(y,fc)
+
+figure(2)
+plot(t,y)
+xlabel("Asse del tempo")
+ylabel("y")
+
