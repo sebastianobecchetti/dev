@@ -56,4 +56,3 @@ sistema = System(2, M1, M2)
 sistema.system_info()
 sistema.plot_response(50, x_0)
 sistema.custom_func(0.0)
-

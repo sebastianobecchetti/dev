@@ -1,0 +1,3 @@
+[submodule "JavaProjects/demo"]
+	path = JavaProjects/demo
+	url = git@github.com:sebastianobecchetti/demo.git
