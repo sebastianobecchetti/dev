@@ -15,7 +15,7 @@ int main() {
         flag = 1;
       }
     }
-  }
+  } // TODO: asdfasdf
   if (flag == 1) {
     printf("L'array presenta almeno un elemento ripetuto");
   }
