@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Tutor Circuiti Elettrici</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">Tutor Circuiti Elettrici</h1>
+                <div class="header-controls">
+                    <div class="theme-selector">
+                        <button class="theme-btn" id="theme-btn" title="Cambia Tema">
+                            <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <line x1="3" y1="12" x2="21" y2="12"></line>
+                                <line x1="3" y1="18" x2="21" y2="18"></line>
+                            </svg>
+                        </button>
+                        <div class="theme-menu hidden" id="theme-menu">
+                            <button class="theme-option" data-theme="gruvbox">Gruvbox</button>
+                            <button class="theme-option" data-theme="tokyonight">TokyoNight</button>
+                            <button class="theme-option" data-theme="amoled">AMOLED</button>
+                            <button class="theme-option" data-theme="nord">Nord</button>
+                        </div>
+                    </div>
+                    <div class="type-selector">
+                        <label class="type-label">Tipo:</label>
+                        <div class="toggle-group">
+                            <button class="toggle-btn active" data-type="DC">Transitorio DC</button>
+                            <button class="toggle-btn" data-type="AC">Regime AC</button>
+                        </div>
+                    </div>
+                    <div class="nav-buttons">
+                        <button class="nav-btn" id="btn-prev" disabled>
+                            <span>←</span> Prec
+                        </button>
+                        <button class="nav-btn primary" id="btn-next">
+                            Succ <span>→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Circuit Image Card -->
+            <section class="card" id="circuit-card">
+                <div class="card-header">
+                    <h2>Schema Circuito</h2>
+                </div>
+                <div class="card-body">
+                    <div class="circuit-container">
+                        <img id="circuit-img" src="" alt="Circuito" />
+                        <div class="loading-spinner" id="loading">
+                            <div class="spinner"></div>
+                            <p>Generazione circuito...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Question Card -->
+            <section class="card" id="question-card">
+                <div class="card-header">
+                    <h2>Richiesta</h2>
+                </div>
+                <div class="card-body">
+                    <p class="question-text" id="question-text">
+                        Caricamento...
+                    </p>
+                </div>
+            </section>
+
+            <!-- Answer Card -->
+            <section class="card" id="answer-card">
+                <div class="card-header">
+                    <h2>Le Tue Risposte</h2>
+                </div>
+                <div class="card-body">
+                    <div class="inputs-container" id="inputs-container">
+                        <!-- Input fields will be generated dynamically -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Status Bar -->
+        <footer class="status-bar">
+            <div class="status-content">
+                <span class="status-text" id="status-text">Pronto</span>
+                <span class="exercise-counter" id="exercise-counter"></span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>

@@ -1,3 +1,3 @@
-[submodule "JavaProjects/demo"]
-	path = JavaProjects/demo
-	url = git@github.com:sebastianobecchetti/demo.git
+[submodule "Java/IsaacFX"]
+	path = Java/IsaacFX
+	url = git@github.com:sebastianobecchetti/IsaacFX.git

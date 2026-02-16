@@ -1,0 +1,221 @@
+    // AC Analysis Methods
+    
+    struct ACResult {
+        std::map<std::string, double> avgPower;  // resistor name -> power (W)
+        double powerFactor;
+        bool hasPowerFactor;  // true if single source exists
+    };
+    
+    // Calculate impedance in phasor domain
+    Complex calculateImpedance(const Component& c, double omega) {
+        if (c.type == RESISTOR) {
+            return Complex(c.value, 0);  // Z = R
+        } else if (c.type == INDUCTOR) {
+            // Z = jωL, L in mH -> H
+            double L_henry = c.value * 1e-3;
+            return Complex(0, omega * L_henry);  // jωL
+        } else if (c.type == CAPACITOR) {
+            // Z = 1/(jωC) = -j/(ωC), C in µF -> F
+            double C_farad = c.value * 1e-6;
+            return Complex(0, -1.0 / (omega * C_farad));  // -j/(ωC)
+        }
+        return Complex(0, 0);
+    }
+    
+    // Solve AC circuit using complex MNA
+    ACResult solveAC() {
+        ACResult result;
+        result.hasPowerFactor = false;
+        result.powerFactor = 0.0;
+        
+        int numNodes = nodes.size();
+        
+        // Count voltage sources for MNA size
+        std::vector<int> voltSourceIndices;
+        int numSources = 0;
+        for(size_t i=0; i<components.size(); ++i) {
+            if(components[i].type == VOLTAGE_SOURCE) {
+                voltSourceIndices.push_back(i);
+                numSources++;
+            } else if(components[i].type == CURRENT_SOURCE) {
+                numSources++;
+            }
+        }
+        
+        // Check if we have exactly one source for power factor
+        result.hasPowerFactor = (numSources == 1);
+        
+        int numV = voltSourceIndices.size();
+        int mSize = numNodes - 1 + numV;
+        
+        // Complex MNA matrices
+        std::vector<std::vector<Complex>> A(mSize, std::vector<Complex>(mSize, Complex(0, 0)));
+        std::vector<Complex> z(mSize, Complex(0, 0));
+        
+        auto getIdx = [](int n) { return n - 1; };
+        
+        // Fill complex admittances
+        for(const auto& c : components) {
+            Complex Y(0, 0);  // Admittance
+            
+            if (c.type == RESISTOR || c.type == INDUCTOR || c.type == CAPACITOR) {
+                Complex Z = calculateImpedance(c, omega);
+                if (Z.magnitude() > 1e-12) {
+                    Y = Complex(1, 0) / Z;  // Y = 1/Z
+                }
+            } else if (c.type == CURRENT_SOURCE) {
+                // Current sources contribute to RHS
+                int nA = c.nodeA_idx;
+                int nB = c.nodeB_idx;
+                // Assuming AC source with amplitude c.value and phase 0
+                Complex I_source(c.value, 0);
+                if (nA > 0) z[getIdx(nA)] = z[getIdx(nA)] - I_source;
+                if (nB > 0) z[getIdx(nB)] = z[getIdx(nB)] + I_source;
+                continue;
+            } else {
+                continue; // V sources handled below
+            }
+            
+            // Stamp admittance
+            if (Y.magnitude() > 1e-12) {
+                int nA = c.nodeA_idx;
+                int nB = c.nodeB_idx;
+                if (nA > 0) A[getIdx(nA)][getIdx(nA)] = A[getIdx(nA)][getIdx(nA)] + Y;
+                if (nB > 0) A[getIdx(nB)][getIdx(nB)] = A[getIdx(nB)][getIdx(nB)] + Y;
+                if (nA > 0 && nB > 0) {
+                    A[getIdx(nA)][getIdx(nB)] = A[getIdx(nA)][getIdx(nB)] - Y;
+                    A[getIdx(nB)][getIdx(nA)] = A[getIdx(nB)][getIdx(nA)] - Y;
+                }
+            }
+        }
+        
+        // Voltage sources (same MNA technique but with complex values)
+        for (int i = 0; i < numV; ++i) {
+            int compIdx = voltSourceIndices[i];
+            const auto& c = components[compIdx];
+            int row = numNodes - 1 + i;
+            
+            int nA = c.nodeA_idx;
+            int nB = c.nodeB_idx;
+            
+            if (nA > 0) {
+                A[row][getIdx(nA)] = Complex(1, 0);
+                A[getIdx(nA)][row] = Complex(1, 0);
+            }
+            if (nB > 0) {
+                A[row][getIdx(nB)] = Complex(-1, 0);
+                A[getIdx(nB)][row] = Complex(-1, 0);
+            }
+            
+            // Voltage source phasor (amplitude with phase 0)
+            z[row] = Complex(c.value, 0);
+        }
+        
+        // Solve complex system (Gaussian elimination)
+        std::vector<Complex> x = solveComplexLinearSystem(A, z);
+        
+        // Extract node voltages
+        std::vector<Complex> V_nodes(numNodes, Complex(0, 0));
+        for(int i=1; i<numNodes; ++i) {
+            if (getIdx(i) < (int)x.size()) {
+                V_nodes[i] = x[getIdx(i)];
+            }
+        }
+        
+        // Calculate powers for target resistors
+        for (Component* targetR : targetResistors) {
+            if (targetR && targetR->type == RESISTOR) {
+                Complex V_comp = V_nodes[targetR->nodeA_idx] - V_nodes[targetR->nodeB_idx];
+                double V_mag = V_comp.magnitude();
+                // P_avg = |V|^2 / (2*R)
+                double P_avg = (V_mag * V_mag) / (2.0 * targetR->value);
+                result.avgPower[targetR->name] = P_avg;
+            }
+        }
+        
+        // Calculate power factor if single source
+        if (result.hasPowerFactor) {
+            // Find the source
+            Component* source = nullptr;
+            int sourceType = -1; // 0=V, 1=I
+            for (auto& c : components) {
+                if (c.type == VOLTAGE_SOURCE) {
+                    source = &c;
+                    sourceType = 0;
+                    break;
+                } else if (c.type == CURRENT_SOURCE) {
+                    source = &c;
+                    sourceType = 1;
+                    break;
+                }
+            }
+            
+            if (source) {
+                Complex V_source, I_source;
+                
+                if (sourceType == 0) {
+                    // Voltage source: V is known, I is in MNA solution
+                    V_source = Complex(source->value, 0);
+                    // Current through V source is the corresponding MNA variable
+                    // It's at position numNodes-1 (first voltage source)
+                    if ((int)x.size() > numNodes - 1) {
+                        I_source = x[numNodes - 1];
+                    }
+                } else {
+                    // Current source: I is known, V across it is node difference
+                    I_source = Complex(source->value, 0);
+                    V_source = V_nodes[source->nodeA_idx] - V_nodes[source->nodeB_idx];
+                }
+                
+                // Power factor = cos(angle(V) - angle(I))
+                double phi = V_source.phase() - I_source.phase();
+                result.powerFactor = std::cos(phi);
+            }
+        }
+        
+        return result;
+    }
+    
+    // Simple complex linear system solver
+    std::vector<Complex> solveComplexLinearSystem(std::vector<std::vector<Complex>> A, std::vector<Complex> b) {
+        int n = A.size();
+        
+        // Augment matrix
+        for (int i = 0; i < n; i++) {
+            A[i].push_back(b[i]);
+        }
+        
+        // Forward elimination
+        for (int i = 0; i < n; i++) {
+            // Pivoting
+            int pivot = i;
+            for (int j = i + 1; j < n; j++) {
+                if (A[j][i].magnitude() > A[pivot][i].magnitude()) pivot = j;
+            }
+            std::swap(A[i], A[pivot]);
+            
+            if (A[i][i].magnitude() < 1e-12) continue;
+            
+            for (int j = i + 1; j < n; j++) {
+                Complex factor = A[j][i] / A[i][i];
+                for (int k = i; k <= n; k++) {
+                    A[j][k] = A[j][k] - factor * A[i][k];
+                }
+            }
+        }
+        
+        // Back substitution
+        std::vector<Complex> x(n);
+        for (int i = n - 1; i >= 0; i--) {
+            Complex sum(0, 0);
+            for (int j = i + 1; j < n; j++) {
+                sum = sum + A[i][j] * x[j];
+            }
+            if (A[i][i].magnitude() > 1e-12) {
+                x[i] = (A[i][n] - sum) / A[i][i];
+            } else {
+                x[i] = Complex(0, 0);
+            }
+        }
+        return x;
+    }
