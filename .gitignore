@@ -1,0 +1,19 @@
+# Global ignores
+*.ply
+__pycache__/
+*.py[cod]
+.Python
+venv/
+.venv/
+target/
+.DS_Store
+*.exe
+*.o
+*.out
+
+# Project specific executables
+C/buconero
+C++/circuit_generator/circuit_generator
+
+# Specific folder ignores
+Python/compression_DCT/*.ply
