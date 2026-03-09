@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package bek_format;
+
+message CompressedGeometryHeader {
+  uint32 vertex_count = 1;
+  uint32 block_size = 2;
+  uint32 hop_size = 11;
+
+  float sort_min_x = 3;
+  float sort_max_x = 4;
+  float sort_min_y = 5;
+  float sort_max_y = 6;
+  float sort_min_z = 7;
+  float sort_max_z = 8;
+
+  repeated UncompressedChannel uncompressed_channels = 9;
+  repeated CompressedChannel compressed_channels = 10;
+  repeated QuantizedChannel quantized_channels = 12;
+  repeated VectorQuantizedGroup vector_quantized_groups = 14;
+  repeated string dropped_channels = 13;
+}
+
+message UncompressedChannel {
+  string name = 1;
+  string dtype = 2;
+  bytes data = 3;
+}
+
+message CompressedChannel {
+  string name = 1;
+  string dtype = 2;
+  repeated float quantization_array = 3;
+  uint64 arithmetic_payload_bytes = 4;
+}
+
+message QuantizedChannel {
+  string name = 1;
+  double min_val = 2;
+  double max_val = 3;
+  bytes data = 4;  // zstd-compressed delta-encoded uint16 values
+}
+
+message VectorQuantizedGroup {
+  repeated string channel_names = 1;  // Names of channels grouped together (e.g. ['f_dc_0', 'f_dc_1', 'f_dc_2'])
+  bytes codebook = 2; // Flat float32 array of shape (num_clusters, num_channels)
+  bytes indices = 3;  // zstd-compressed array of uint16 cluster assignments
+}
